@@ -1,22 +1,27 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>HeaFit - Home</title>
 </head>
-
 <body>
-  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Annotation</h3>
-  <form action="/" method="post">
-    <input type="text" name="premise" placeholder="Enter premise" required />
-    <input type="text" name="argument" placeholder="Enter argument" required />
-    <input type="submit" value="Generate scores" />
-  </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
+  <header>
+    <div class="header-container">
+      <h1 class="logo">HeaFit</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro-container">
+      <img src="{{ url_for('static', filename='static/dog.png') }}" alt="Fitness background" class="bg-image">
+      <div class="intro-text">
+        <h2>Welcome to HeaFit</h2>
+        <p>Your personalized workout and nutrition plan generator.</p>
+        <a href="{{ url_for('personal_info') }}" class="start-trail-btn">Start Trail</a>
+      </div>
+    </div>
+  </main>
 </body>
+</html>
