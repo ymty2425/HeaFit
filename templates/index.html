@@ -15,10 +15,14 @@
 
   <main>
     <div class="intro-container">
-      <img src="{{ url_for('static', filename='static/dog.png') }}" alt="Fitness background" class="bg-image">
+      <img src="{{ url_for('static', filename='dog.png') }}" alt="Fitness background" class="bg-image">
       <div class="intro-text">
-        <h2>Welcome to HeaFit</h2>
-        <p>Your personalized workout and nutrition plan generator.</p>
+          <h2>Welcome to HeaFit</h2>
+          <p>With the changing lifestyles of modern people, health has become a significant concern for individuals. 
+            People hope to maintain their physical health through proper diet and exercise, and each person's body condition and health needs are different, 
+            requiring personalized health training plans. A health training plan application can help users develop personalized health training plans based on their body condition, 
+            health needs, and preferences, enabling them to achieve their health goals better. 
+            Therefore, our project will implement the OpenAI API to provide users with a customized and interactive experience that is tailored to their unique fitness goals and needs.</p>
         <a href="{{ url_for('personal_info') }}" class="start-trail-btn">Start Trail</a>
       </div>
     </div>

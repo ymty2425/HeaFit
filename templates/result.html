@@ -19,9 +19,26 @@
       <div id="plan">
         <!-- The generated plan will be displayed here -->
       </div>
-      <div id="chatbot-container">
-        <!-- The chatbot will be embedded here -->
+
+      <div id="chatbot-icon">
+        <img src="{{ url_for('static', filename='dog.png') }}" alt="Chatbot Icon" />
       </div>
+    
+      <div id="chatbot-container" class="collapsed">
+        <div id="chatbot-header">
+          <h3>Chatbot</h3>
+          <button id="chatbot-close">&times;</button>
+        </div>
+        <div id="chatbot-content">
+          <div id="messages">
+            <!-- Messages will be displayed here -->
+          </div>
+        </div>
+        <div id="message-input-container">
+          <input id="message-input" type="text" placeholder="Type your message..." />
+        </div>
+      </div>
+
     </div>
   </main>
 
