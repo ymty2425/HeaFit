@@ -1,6 +1,26 @@
-# OpenAI API Quickstart - Python example app
+# HeaFit - Flask Web Application
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
+HeaFit is a web application built using Flask that generates personalized workout and nutrition plans for users based on their fitness goals and preferences. Users can also interact with a chatbot to get more information and ask questions about their plans.
+
+## Features
+
+- Personalized workout and nutrition plan generation
+- User input validation
+- Chatbot for user interaction and answering questions
+- Responsive design for different devices
+
+## Prerequisites
+
+To run this project, you'll need the following installed:
+
+- Python 3.6 or later
+- pip (Python package manager)
+
+## Installation
+
+1. Clone the repository:
+https://github.com/ymty2425/HeaFit.git
+
 
 ## Setup
 
@@ -11,7 +31,7 @@ This is an example pet name generator app used in the OpenAI API [quickstart tut
 3. Navigate into the project directory:
 
    ```bash
-   $ cd openai-quickstart-python
+   $ cd HeaFit
    ```
 
 4. Create a new virtual environment:

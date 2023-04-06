@@ -9,25 +9,30 @@
 <body>
   <header>
     <div class="header-container">
-      <h1 class="logo">HeaFit</h1>
+      <h1 class="logo">
+        <div class="logo-wrapper">
+          <img src="{{ url_for('static', filename='image/logo.png') }}" alt="HeaFit Logo">
+          <span>HeaFit</span>
+        </div>
+      </h1>
     </div>
   </header>
 
   <main>
     <div class="plan-container">
-      <h2>Your Workout and Nutrition Plan</h2>
+      <!--<h2>Your Workout and Nutrition Plan</h2>-->
       <div id="plan">
         <!-- The generated plan will be displayed here -->
       </div>
 
       <div id="chatbot-icon">
-        <img src="{{ url_for('static', filename='dog.png') }}" alt="Chatbot Icon" />
+        <img src="{{ url_for('static', filename='dog.png') }}" alt="Chatbot Icon" onclick="toggleChatbot()"/>
       </div>
     
       <div id="chatbot-container" class="collapsed">
         <div id="chatbot-header">
           <h3>Chatbot</h3>
-          <button id="chatbot-close">&times;</button>
+          <button id="chatbot-close" onclick="toggleChatbot()">&times;</button>
         </div>
         <div id="chatbot-content">
           <div id="messages">
@@ -35,7 +40,7 @@
           </div>
         </div>
         <div id="message-input-container">
-          <input id="message-input" type="text" placeholder="Type your message..." />
+          <input id="message-input" type="text" placeholder="Type your message..." onkeydown="handleKeyDown(event)"/>
         </div>
       </div>
 

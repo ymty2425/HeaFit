@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const personalInfoForm1 = document.getElementById('personal-info-form');
     const planElement = document.getElementById('plan');
     const chatbotContainer = document.getElementById('chatbot-container');
     const chatbotContent = document.getElementById('chatbot-content');
@@ -27,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
             // Save the generated workout plan in the local storage to access it on the result page
             localStorage.setItem('workoutPlan', plan.plan);
+
+            personalInfoForm.reset()
     
             // Redirect to the result page
             window.location.href = "/result";
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Display the plan
         planElement.innerHTML = `
-          <h2>Workout Plan</h2>
+          <h2>Workout and Nutrition Plan</h2>
           <p>${formattedWorkoutPlan}</p>
         `;
       } else {
@@ -100,6 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         messageElement.classList.add(sender);
         messageElement.textContent = message;
         messages.appendChild(messageElement);
+
+        // Scroll to the bottom of the chat container
+        messages.scrollTop = messages.scrollHeight;
       }
 
       // Event listener for the message input field

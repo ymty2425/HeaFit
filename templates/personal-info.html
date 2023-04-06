@@ -9,40 +9,53 @@
 <body>
   <header>
     <div class="header-container">
-      <h1 class="logo">HeaFit</h1>
+      <h1 class="logo">
+        <div class="logo-wrapper">
+          <img src="{{ url_for('static', filename='image/logo.png') }}" alt="HeaFit Logo">
+          <span>HeaFit</span>
+        </div>
+      </h1>
     </div>
   </header>
 
   <main>
     <div class="form-container">
-      <h2>Personal Information</h2>
       <form id="personal-info-form" action="{{ url_for('personal_info') }}" method="post">
-        <label for="height">Height (cm):</label>
-        <input type="number" id="height" name="height" required>
-        
-        <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" name="weight" required>
-        
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" required>
+      
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" required>
+      
+          <label for="gender">Gender</label>
+          <select id="gender" required>
+            <option value="">Choose your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
 
-        <label for="fitness-goal">Fitness Goal:</label>
-        <input type="text" id="fitness-goal" name="fitness-goal" required>
+          <label for="fitness-goal">Fitness Goal:</label>
+          <select id="fitness-goal" name="fitness-goal" required>
+            <option value="">Choose a goal</option>
+            <option value="lose_weight">Lose Weight</option>
+            <option value="build_muscle">Build Muscle</option>
+            <option value="increase_stamina">Increase Stamina</option>
+            <option value="improve_flexibility">Improve Flexibility</option>
+          </select>
 
-        <label for="fitness-level">Fitness Level:</label>
-        <select id="fitness-level" name="fitness-level" required>
-          <option value="beginner">Beginner</option>
-          <option value="intermediate">Intermediate</option>
-          <option value="advanced">Advanced</option>
-        </select>
+          <label for="fitness-level">Fitness Level:</label>
+          <select id="fitness-level" name="fitness-level" required>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
 
-        <label for="dietary-requirements">Dietary Requirements:</label>
-        <input type="text" id="dietary-requirements" name="dietary-requirements">
-        
+          <label for="dietary-requirements">Dietary Requirements:</label>
+          <input type="text" id="dietary-requirements" name="dietary-requirements" pattern="[a-zA-Z, ]*" title="Please use letters and commas only.">
+        </fieldset>
         <button type="submit" class="submit-btn">Generate Plan</button>
       </form>
     </div>
