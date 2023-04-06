@@ -60,6 +60,7 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
 
+  /* hero section styling */
   .hero {
     height: calc(100vh - 80px);
     position: relative;
@@ -71,30 +72,35 @@
     width: 100%;
   }
   
+  /* hero title styling */
   .hero-title {
     font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 1rem;
   }
   
+  /* hero text styling */
   .hero-text {
     font-size: 1.2rem;
     color: #ffffff;
     margin-bottom: 2rem;
   }
   
+  /* intro container styling */ 
   .intro-container {
     position: relative;
     text-align: center;
     padding: 50px;
   }
   
+  /* background image styling */
   .bg-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
+  /* intro text styling */
   .intro-text {
     font-family: 'Roboto', sans-serif;
     position: absolute;
@@ -105,6 +111,7 @@
     color: #ffffff;
   }
   
+  /* start trail button styling */
   .start-trail-btn {
     display: inline-block;
     background-color: #333;
@@ -127,17 +134,20 @@
     border-radius: 5px;
   }
 
+  /* fieldset styling */
   fieldset {
     border: none;
     margin-bottom: 20px;
   }
   
+  /* legend styling */
   legend {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
+  /* label styling */
   label {
     display: block;
     margin-top: 20px;
@@ -153,6 +163,7 @@
     border-radius: 4px;
   }
   
+  /* submit btn styling*/
   button.submit-btn {
     background-color: #333;
     color: #fff;
@@ -170,14 +181,16 @@
     background-color: #555;
   }
 
+  /* plan container styling */
   .plan-container {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
   background-color: #f2f2f2;
   border-radius: 5px;
-}
+  }
 
+/* Chatbot icon styling */
 #chatbot-icon {
   position: fixed;
   bottom: 20px;
@@ -234,7 +247,7 @@
   transform: translateY(100%);
 }
 
-/* Message input styling */
+/* Message input container styling */
 #message-input-container {
   height: 50px;
   padding: 0.5rem;
@@ -251,7 +264,7 @@
   outline: none;
 }
 
-/* Messages container styling */
+/* Messages styling */
 #messages {
   padding: 0.5rem;
   overflow-y: auto;
